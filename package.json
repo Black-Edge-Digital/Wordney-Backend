@@ -1,0 +1,7 @@
+{
+  "name": "wordney-backend",
+  "version": "1.0.0",
+  "main": "api/verify-license.js",
+  "type": "module",
+  "dependencies": {}
+} 
