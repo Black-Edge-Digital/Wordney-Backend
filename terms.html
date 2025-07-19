@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - Wordney Chrome Extension</title>
+    <meta name="description" content="Terms of Service for Wordney Chrome extension. Learn about usage rights, limitations, and user agreements.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', 'SF Pro Display', system-ui, sans-serif;
+            line-height: 1.6;
+            color: #1e293b;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 24px;
+            font-weight: 800;
+            color: #10b981;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 800;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #64748b;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #10b981;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 3rem 0;
+            text-align: center;
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            margin-bottom: 3rem;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Content */
+        .content {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 3rem;
+        }
+
+        .section {
+            margin-bottom: 2.5rem;
+        }
+
+        .section:last-child {
+            margin-bottom: 0;
+        }
+
+        .section h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #e2e8f0;
+        }
+
+        .section h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #1e293b;
+            margin: 1.5rem 0 0.5rem 0;
+        }
+
+        .section p {
+            color: #64748b;
+            margin-bottom: 1rem;
+            line-height: 1.7;
+        }
+
+        .section ul {
+            color: #64748b;
+            margin: 1rem 0;
+            padding-left: 1.5rem;
+        }
+
+        .section ul li {
+            margin-bottom: 0.5rem;
+            line-height: 1.6;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(5, 150, 105, 0.1) 100%);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .highlight-box h4 {
+            color: #059669;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight-box p {
+            color: #10b981;
+            margin-bottom: 0;
+        }
+
+        .warning-box {
+            background: linear-gradient(135deg, rgba(249, 115, 22, 0.1) 0%, rgba(234, 88, 12, 0.1) 100%);
+            border: 1px solid rgba(249, 115, 22, 0.3);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .warning-box h4 {
+            color: #ea580c;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .warning-box p {
+            color: #f97316;
+            margin-bottom: 0;
+        }
+
+        .last-updated {
+            background: #f8fafc;
+            border-radius: 12px;
+            padding: 1rem;
+            text-align: center;
+            color: #64748b;
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #1e293b;
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 1rem;
+            color: #10b981;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section ul li a {
+            color: #cbd5e1;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section ul li a:hover {
+            color: #10b981;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #334155;
+            padding-top: 2rem;
+            color: #94a3b8;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .content {
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">W</div>
+                    Wordney
+                </a>
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="support.html">Support</a></li>
+                        <li><a href="privacy.html">Privacy</a></li>
+                        <li><a href="terms.html">Terms</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Terms of Service</h1>
+            <p>Please read these terms carefully before using Wordney. By using our service, you agree to these terms.</p>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="last-updated">
+            <strong>Last Updated:</strong> December 2024
+        </div>
+
+        <div class="content">
+            <div class="section">
+                <h2>1. Acceptance of Terms</h2>
+                <p>
+                    By downloading, installing, or using the Wordney Chrome extension ("Service"), you agree to be bound by these 
+                    Terms of Service ("Terms"). If you do not agree to these Terms, please do not use our Service.
+                </p>
+                
+                <div class="highlight-box">
+                    <h4>📋 Agreement</h4>
+                    <p>Using Wordney means you accept these terms. We recommend reading them carefully to understand your rights and responsibilities.</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>2. Description of Service</h2>
+                <p>
+                    Wordney is a Chrome browser extension that provides instant word definitions when you highlight text on web pages. 
+                    The Service includes both free and premium features, as described on our website.
+                </p>
+                
+                <h3>Free Features</h3>
+                <ul>
+                    <li>Basic word definitions with daily limits</li>
+                    <li>Standard definition accuracy</li>
+                    <li>Basic support</li>
+                </ul>
+
+                <h3>Premium Features</h3>
+                <ul>
+                    <li>Unlimited definitions</li>
+                    <li>Advanced word analysis</li>
+                    <li>Pronunciation guides</li>
+                    <li>Etymology information</li>
+                    <li>Priority customer support</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>3. User Accounts and License Keys</h2>
+                
+                <h3>License Validation</h3>
+                <p>
+                    Premium features require a valid license key. You are responsible for:
+                </p>
+                <ul>
+                    <li>Keeping your license key secure and confidential</li>
+                    <li>Not sharing your license key with others</li>
+                    <li>Ensuring your license key is valid and up-to-date</li>
+                </ul>
+
+                <h3>Account Security</h3>
+                <p>
+                    You are responsible for maintaining the security of your license key and for all activities that occur 
+                    under your license. Notify us immediately of any unauthorized use of your license.
+                </p>
+
+                <div class="warning-box">
+                    <h4>⚠️ License Sharing Prohibited</h4>
+                    <p>Sharing license keys is a violation of these terms and may result in license revocation without refund.</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>4. Acceptable Use</h2>
+                
+                <h3>You May:</h3>
+                <ul>
+                    <li>Use Wordney for personal, educational, and professional purposes</li>
+                    <li>Install the extension on multiple devices with the same license</li>
+                    <li>Use the Service in accordance with applicable laws and regulations</li>
+                </ul>
+
+                <h3>You May Not:</h3>
+                <ul>
+                    <li>Use the Service for any illegal or unauthorized purpose</li>
+                    <li>Attempt to reverse engineer, decompile, or modify the extension</li>
+                    <li>Share or distribute your license key to others</li>
+                    <li>Use automated systems to access the Service excessively</li>
+                    <li>Interfere with or disrupt the Service or servers</li>
+                    <li>Attempt to gain unauthorized access to our systems</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>5. Intellectual Property</h2>
+                
+                <h3>Our Rights</h3>
+                <p>
+                    Wordney and all related content, features, and functionality are owned by us and are protected by 
+                    copyright, trademark, and other intellectual property laws.
+                </p>
+
+                <h3>Your Rights</h3>
+                <p>
+                    We grant you a limited, non-exclusive, non-transferable license to use Wordney for your personal use 
+                    in accordance with these Terms.
+                </p>
+
+                <h3>Third-Party Content</h3>
+                <p>
+                    Definitions and other content provided through Wordney may come from third-party sources. 
+                    We do not claim ownership of this content and respect the intellectual property rights of these sources.
+                </p>
+            </div>
+
+            <div class="section">
+                <h2>6. Privacy and Data Protection</h2>
+                <p>
+                    Your privacy is important to us. Our collection and use of personal information is governed by our 
+                    Privacy Policy, which is incorporated into these Terms by reference.
+                </p>
+                
+                <div class="highlight-box">
+                    <h4>🔒 Privacy Commitment</h4>
+                    <p>We're committed to protecting your privacy. See our Privacy Policy for detailed information about data handling.</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>7. Payment and Refunds</h2>
+                
+                <h3>Payment Terms</h3>
+                <ul>
+                    <li>Premium features require a one-time payment</li>
+                    <li>All payments are processed securely through third-party payment processors</li>
+                    <li>Prices are subject to change with notice</li>
+                </ul>
+
+                <h3>Refund Policy</h3>
+                <p>
+                    We offer a 30-day money-back guarantee for premium licenses. If you're not satisfied with Wordney 
+                    within 30 days of purchase, contact our support team for a full refund.
+                </p>
+
+                <div class="warning-box">
+                    <h4>⚠️ No Refunds After 30 Days</h4>
+                    <p>Refunds are only available within 30 days of purchase. After this period, all sales are final.</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>8. Service Availability and Updates</h2>
+                
+                <h3>Service Availability</h3>
+                <p>
+                    We strive to maintain high availability of our Service, but we do not guarantee uninterrupted access. 
+                    The Service may be temporarily unavailable due to maintenance, updates, or technical issues.
+                </p>
+
+                <h3>Updates and Changes</h3>
+                <p>
+                    We may update the Service from time to time to improve functionality, security, or user experience. 
+                    Updates may be automatic or require manual installation.
+                </p>
+
+                <h3>Discontinuation</h3>
+                <p>
+                    We reserve the right to discontinue the Service at any time. If we discontinue the Service, 
+                    we will provide reasonable notice and may offer refunds for recent purchases.
+                </p>
+            </div>
+
+            <div class="section">
+                <h2>9. Disclaimers and Limitations</h2>
+                
+                <h3>Service "As Is"</h3>
+                <p>
+                    Wordney is provided "as is" without warranties of any kind. We disclaim all warranties, 
+                    express or implied, including but not limited to warranties of merchantability, fitness for a 
+                    particular purpose, and non-infringement.
+                </p>
+
+                <h3>Limitation of Liability</h3>
+                <p>
+                    In no event shall we be liable for any indirect, incidental, special, consequential, or punitive 
+                    damages, including but not limited to loss of profits, data, or use, arising out of or relating to 
+                    your use of the Service.
+                </p>
+
+                <h3>Definition Accuracy</h3>
+                <p>
+                    While we strive for accuracy, we do not guarantee that definitions are always correct or complete. 
+                    Users should verify important information from authoritative sources.
+                </p>
+            </div>
+
+            <div class="section">
+                <h2>10. Termination</h2>
+                
+                <h3>Your Right to Terminate</h3>
+                <p>
+                    You may stop using Wordney at any time by uninstalling the extension from your browser.
+                </p>
+
+                <h3>Our Right to Terminate</h3>
+                <p>
+                    We may terminate or suspend your access to the Service immediately, without prior notice, 
+                    for conduct that we believe violates these Terms or is harmful to other users or the Service.
+                </p>
+
+                <h3>Effect of Termination</h3>
+                <p>
+                    Upon termination, your right to use the Service will cease immediately. You may lose access 
+                    to premium features and any stored data.
+                </p>
+            </div>
+
+            <div class="section">
+                <h2>11. Governing Law and Disputes</h2>
+                
+                <h3>Governing Law</h3>
+                <p>
+                    These Terms shall be governed by and construed in accordance with the laws of [Your Jurisdiction], 
+                    without regard to its conflict of law provisions.
+                </p>
+
+                <h3>Dispute Resolution</h3>
+                <p>
+                    Any disputes arising from these Terms or your use of the Service shall be resolved through 
+                    binding arbitration in accordance with the rules of [Arbitration Organization].
+                </p>
+            </div>
+
+            <div class="section">
+                <h2>12. Changes to Terms</h2>
+                <p>
+                    We reserve the right to modify these Terms at any time. We will notify users of material changes by:
+                </p>
+                <ul>
+                    <li>Posting the updated Terms on our website</li>
+                    <li>Sending email notifications to registered users</li>
+                    <li>Displaying notifications in the extension</li>
+                </ul>
+                <p>
+                    Your continued use of Wordney after changes become effective constitutes acceptance of the new Terms.
+                </p>
+            </div>
+
+            <div class="section">
+                <h2>13. Contact Information</h2>
+                <p>
+                    If you have any questions about these Terms of Service, please contact us:
+                </p>
+                <ul>
+                    <li><strong>Email:</strong> legal@wordney.com</li>
+                    <li><strong>Support:</strong> <a href="support.html">Contact Support</a></li>
+                    <li><strong>Address:</strong> [Your Business Address]</li>
+                </ul>
+                
+                <div class="highlight-box">
+                    <h4>📞 Questions?</h4>
+                    <p>If you have any questions about these terms, we're here to help. Contact our support team for clarification.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Wordney</h4>
+                    <p>The smartest way to learn new words while browsing the web.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="support.html">Support</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="cookies.html">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Wordney. All rights reserved. Built with ❤️ for learners everywhere.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 
