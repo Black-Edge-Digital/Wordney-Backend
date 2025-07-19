@@ -38,13 +38,18 @@ cd wordney-backend
 npm install
 ```
 
-### 3. Configure Environment
+### 3. Configure Environment Variables
 
-Update the `product_id` in `api/verify-license.js` with your Gumroad product ID:
-
-```javascript
-const product_id = 'YOUR_ACTUAL_PRODUCT_ID';
+**For Local Development:**
+Create a `.env.local` file:
+```bash
+GUMROAD_PRODUCT_ID=your_gumroad_product_id_here
 ```
+
+**For Production (Vercel):**
+1. Go to your Vercel project dashboard
+2. Navigate to "Settings" → "Environment Variables"
+3. Add: `GUMROAD_PRODUCT_ID` = `your_gumroad_product_id_here`
 
 ### 4. Deploy to Vercel
 
@@ -122,6 +127,12 @@ if (result.valid) {
   console.log('Invalid license');
 }
 ```
+
+## 🔒 Security
+
+- Product ID is stored as an environment variable (not in code)
+- No sensitive data is committed to the repository
+- API responses are sanitized
 
 ## 📝 License
 

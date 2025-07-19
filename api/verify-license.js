@@ -7,8 +7,14 @@ export default async function handler(req, res) {
   }
 
   const { license } = req.body;
-  // Get this from your Gumroad product's license key module
-  const product_id = 'YOUR_PRODUCT_ID_HERE'; // Replace with your actual product_id
+  // Use environment variable for security (since repo is public)
+  const product_id = process.env.GUMROAD_PRODUCT_ID;
+
+  if (!product_id) {
+    console.error('GUMROAD_PRODUCT_ID environment variable not set');
+    res.status(500).json({ error: 'Server configuration error' });
+    return;
+  }
 
   try {
     const gumroadRes = await axios.post('https://api.gumroad.com/v2/licenses/verify', {
