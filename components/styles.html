@@ -283,6 +283,133 @@
         padding: 4rem 0;
     }
 
+    /* Support Page Specific Styles */
+    .support-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 3rem;
+        margin-bottom: 3rem;
+    }
+
+    .faq-section {
+        background: white;
+        border-radius: 20px;
+        padding: 2rem;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .faq-item {
+        margin-bottom: 1.5rem;
+        border-bottom: 1px solid #e2e8f0;
+        padding-bottom: 1.5rem;
+    }
+
+    .faq-item:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+    }
+
+    .faq-question {
+        font-weight: 600;
+        color: #1e293b;
+        margin-bottom: 0.5rem;
+        font-size: 1.1rem;
+    }
+
+    .faq-answer {
+        color: #64748b;
+        line-height: 1.6;
+    }
+
+    /* Contact Form */
+    .contact-section {
+        background: white;
+        border-radius: 20px;
+        padding: 2rem;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        height: fit-content;
+    }
+
+    .form-group {
+        margin-bottom: 1.5rem;
+    }
+
+    .form-label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+        color: #1e293b;
+    }
+
+    .form-input, .form-textarea, .form-select {
+        width: 100%;
+        padding: 12px 16px;
+        border: 2px solid #e2e8f0;
+        border-radius: 12px;
+        font-size: 14px;
+        transition: border-color 0.3s ease;
+        background: #f8fafc;
+    }
+
+    .form-input:focus, .form-textarea:focus, .form-select:focus {
+        outline: none;
+        border-color: #10b981;
+        background: white;
+    }
+
+    .form-textarea {
+        resize: vertical;
+        min-height: 120px;
+    }
+
+    /* Troubleshooting */
+    .troubleshooting {
+        background: white;
+        border-radius: 20px;
+        padding: 2rem;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        margin-bottom: 3rem;
+    }
+
+    .trouble-item {
+        background: #f8fafc;
+        border-left: 4px solid #10b981;
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+        border-radius: 0 12px 12px 0;
+    }
+
+    .trouble-title {
+        font-weight: 600;
+        color: #1e293b;
+        margin-bottom: 0.5rem;
+    }
+
+    .trouble-desc {
+        color: #64748b;
+        margin-bottom: 1rem;
+    }
+
+    .trouble-steps {
+        list-style: none;
+        padding-left: 0;
+    }
+
+    .trouble-steps li {
+        padding: 0.5rem 0;
+        border-bottom: 1px solid #e2e8f0;
+    }
+
+    .trouble-steps li:last-child {
+        border-bottom: none;
+    }
+
+    .trouble-steps li::before {
+        content: "→ ";
+        color: #10b981;
+        font-weight: bold;
+    }
+
     /* Buttons */
     .btn {
         padding: 12px 24px;
@@ -495,6 +622,10 @@
         }
 
         .demo-content {
+            grid-template-columns: 1fr;
+        }
+
+        .support-grid {
             grid-template-columns: 1fr;
         }
     }
