@@ -8,433 +8,24 @@
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-            body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'SF Pro Display', system-ui, sans-serif;
-      line-height: 1.6;
-      color: #1e293b;
-      background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-      min-height: 100vh;
-      font-weight: 100;
-    }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Header */
-        header {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(226, 232, 240, 0.8);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 0;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            font-size: 24px;
-            font-weight: 800;
-            color: #10b981;
-            text-decoration: none;
-        }
-
-        .logo-icon {
-            width: 40px;
-            height: 40px;
-            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: 800;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: #64748b;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        .nav-links a:hover {
-            color: #10b981;
-        }
-
-        /* Hero Section */
-        .hero {
-            padding: 4rem 0;
-            text-align: center;
-            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-            color: white;
-            margin-bottom: 4rem;
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 800;
-            margin-bottom: 1rem;
-            line-height: 1.2;
-        }
-
-        .hero p {
-            font-size: 1.25rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            padding: 12px 24px;
-            border-radius: 12px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .btn-primary {
-            background: white;
-            color: #10b981;
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-        }
-
-        .btn-secondary {
-            background: rgba(255, 255, 255, 0.1);
-            color: white;
-            border: 2px solid rgba(255, 255, 255, 0.3);
-        }
-
-        .btn-secondary:hover {
-            background: rgba(255, 255, 255, 0.2);
-            transform: translateY(-2px);
-        }
-
-        /* Features Section */
-        .features {
-            padding: 4rem 0;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            font-weight: 800;
-            margin-bottom: 3rem;
-            color: #1e293b;
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-bottom: 4rem;
-        }
-
-        .feature-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 20px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .feature-icon {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-            border-radius: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            color: white;
-            margin-bottom: 1rem;
-        }
-
-        .feature-title {
-            font-size: 1.25rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            color: #1e293b;
-        }
-
-        .feature-desc {
-            color: #64748b;
-            line-height: 1.6;
-        }
-
-        /* How it Works */
-        .how-it-works {
-            padding: 4rem 0;
-            background: white;
-        }
-
-        .steps {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-bottom: 3rem;
-        }
-
-        .step {
-            text-align: center;
-            padding: 2rem;
-        }
-
-        .step-number {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.5rem;
-            font-weight: 800;
-            margin: 0 auto 1rem;
-        }
-
-        .step-title {
-            font-size: 1.25rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            color: #1e293b;
-        }
-
-        .step-desc {
-            color: #64748b;
-        }
-
-        /* Demo Section */
-        .demo {
-            padding: 4rem 0;
-            background: #f8fafc;
-        }
-
-        .demo-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
-        }
-
-        .demo-text h3 {
-            font-size: 2rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            color: #1e293b;
-        }
-
-        .demo-text p {
-            color: #64748b;
-            margin-bottom: 1.5rem;
-            font-size: 1.1rem;
-        }
-
-        .demo-image {
-            background: white;
-            border-radius: 20px;
-            padding: 2rem;
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-
-        .demo-placeholder {
-            width: 100%;
-            height: 300px;
-            background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 100%);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #64748b;
-            font-weight: 600;
-        }
-
-        /* Pricing */
-        .pricing {
-            padding: 4rem 0;
-            background: white;
-        }
-
-        .pricing-card {
-            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-            color: white;
-            padding: 3rem;
-            border-radius: 20px;
-            text-align: center;
-            max-width: 500px;
-            margin: 0 auto;
-        }
-
-        .pricing-title {
-            font-size: 2rem;
-            font-weight: 800;
-            margin-bottom: 1rem;
-        }
-
-        .pricing-price {
-            font-size: 3rem;
-            font-weight: 800;
-            margin-bottom: 1rem;
-        }
-
-        .pricing-features {
-            list-style: none;
-            margin-bottom: 2rem;
-        }
-
-        .pricing-features li {
-            padding: 0.5rem 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        .pricing-features li:last-child {
-            border-bottom: none;
-        }
-
-        /* Footer */
-        footer {
-            background: #1e293b;
-            color: white;
-            padding: 3rem 0;
-            text-align: center;
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .footer-section h4 {
-            margin-bottom: 1rem;
-            color: #10b981;
-        }
-
-        .footer-section ul {
-            list-style: none;
-        }
-
-        .footer-section ul li {
-            margin-bottom: 0.5rem;
-        }
-
-        .footer-section ul li a {
-            color: #cbd5e1;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .footer-section ul li a:hover {
-            color: #10b981;
-        }
-
-        .footer-bottom {
-            border-top: 1px solid #334155;
-            padding-top: 2rem;
-            color: #94a3b8;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .demo-content {
-                grid-template-columns: 1fr;
-            }
-
-            .nav-links {
-                display: none;
-            }
-
-            .cta-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-    </style>
-</head>
+      <script src="js/components.js"></script>
+    </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <a href="index.html" class="logo">
-                    <div class="logo-icon">W</div>
-                    Wordney
-                </a>
-                <nav>
-                    <ul class="nav-links">
-                        <li><a href="#features">Features</a></li>
-                        <li><a href="#how-it-works">How it Works</a></li>
-                        <li><a href="#pricing">Pricing</a></li>
-                        <li><a href="#download">Download</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </header>
+    <!-- Header placeholder - will be loaded by JavaScript -->
+    <div id="header-placeholder"></div>
 
     <section class="hero">
         <div class="container">
             <h1>Instant Definitions at Your Fingertips</h1>
             <p>Highlight any word while browsing and get instant definitions. No distractions, no popups, just pure learning.</p>
             <div class="cta-buttons">
-                                        <a href="https://chrome.google.com/webstore/detail/wordney-instant-definitions/your-extension-id" class="btn btn-primary">
-                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M10 12l-4-4h8l-4 4z"/>
-                                <path d="M10 2v8"/>
-                            </svg>
-                            Install Extension
-                        </a>
+                <a href="https://chrome.google.com/webstore/detail/wordney-instant-definitions/your-extension-id" class="btn btn-primary">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 12l-4-4h8l-4 4z"/>
+                        <path d="M10 2v8"/>
+                    </svg>
+                    Install Extension
+                </a>
                 <a href="#how-it-works" class="btn btn-secondary">Learn More</a>
             </div>
         </div>
@@ -532,7 +123,7 @@
                     <li>✅ Priority support</li>
                     <li>✅ Lifetime access</li>
                 </ul>
-                                        <a href="https://chrome.google.com/webstore/detail/wordney-instant-definitions/your-extension-id" class="btn btn-primary">Get Premium Access</a>
+                <a href="https://chrome.google.com/webstore/detail/wordney-instant-definitions/your-extension-id" class="btn btn-primary">Get Premium Access</a>
             </div>
         </div>
     </section>
@@ -545,55 +136,20 @@
                     Join thousands of users who are already expanding their vocabulary with Wordney.
                 </p>
                 <div class="cta-buttons">
-                                            <a href="https://chrome.google.com/webstore/detail/wordney-instant-definitions/your-extension-id" class="btn btn-primary" style="font-size: 1.1rem; padding: 16px 32px;">
-                            <svg width="24" height="24" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M10 12l-4-4h8l-4 4z"/>
-                                <path d="M10 2v8"/>
-                            </svg>
-                            Download for Chrome
-                        </a>
+                    <a href="https://chrome.google.com/webstore/detail/wordney-instant-definitions/your-extension-id" class="btn btn-primary" style="font-size: 1.1rem; padding: 16px 32px;">
+                        <svg width="24" height="24" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M10 12l-4-4h8l-4 4z"/>
+                            <path d="M10 2v8"/>
+                        </svg>
+                        Download for Chrome
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>Wordney</h4>
-                    <p>The smartest way to learn new words while browsing the web.</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Product</h4>
-                    <ul>
-                        <li><a href="#features">Features</a></li>
-                        <li><a href="#pricing">Pricing</a></li>
-                        <li><a href="#download">Download</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Support</h4>
-                    <ul>
-                        <li><a href="support.html">Help Center</a></li>
-                        <li><a href="support.html">Contact Us</a></li>
-                        <li><a href="privacy.html">Privacy Policy</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Legal</h4>
-                    <ul>
-                        <li><a href="terms.html">Terms of Service</a></li>
-                        <li><a href="privacy.html">Privacy Policy</a></li>
-                        <li><a href="cookies.html">Cookie Policy</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Wordney. All rights reserved. Built with ❤️ for learners everywhere.</p>
-            </div>
-        </div>
-    </footer>
+    <!-- Footer placeholder - will be loaded by JavaScript -->
+    <div id="footer-placeholder"></div>
 
     <script>
         // Smooth scrolling for navigation links

@@ -98,6 +98,191 @@
         margin: 0 auto;
     }
 
+    /* Features Section */
+    .features {
+        padding: 4rem 0;
+    }
+
+    .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-bottom: 4rem;
+    }
+
+    .feature-card {
+        background: white;
+        padding: 2rem;
+        border-radius: 20px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+    }
+
+    .feature-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .feature-icon {
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        color: white;
+        margin-bottom: 1rem;
+    }
+
+    .feature-title {
+        font-size: 1.25rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+        color: #1e293b;
+    }
+
+    .feature-desc {
+        color: #64748b;
+        line-height: 1.6;
+    }
+
+    /* How it Works */
+    .how-it-works {
+        padding: 4rem 0;
+        background: white;
+    }
+
+    .steps {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    .step {
+        text-align: center;
+        padding: 2rem;
+    }
+
+    .step-number {
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 1.5rem;
+        font-weight: 800;
+        margin: 0 auto 1rem;
+    }
+
+    .step-title {
+        font-size: 1.25rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+        color: #1e293b;
+    }
+
+    .step-desc {
+        color: #64748b;
+    }
+
+    /* Demo Section */
+    .demo {
+        padding: 4rem 0;
+        background: #f8fafc;
+    }
+
+    .demo-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        align-items: center;
+    }
+
+    .demo-text h3 {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        color: #1e293b;
+    }
+
+    .demo-text p {
+        color: #64748b;
+        margin-bottom: 1.5rem;
+        font-size: 1.1rem;
+    }
+
+    .demo-image {
+        background: white;
+        border-radius: 20px;
+        padding: 2rem;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    .demo-placeholder {
+        width: 100%;
+        height: 300px;
+        background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 100%);
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #64748b;
+        font-weight: 600;
+    }
+
+    /* Pricing */
+    .pricing {
+        padding: 4rem 0;
+        background: white;
+    }
+
+    .pricing-card {
+        background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+        color: white;
+        padding: 3rem;
+        border-radius: 20px;
+        text-align: center;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .pricing-title {
+        font-size: 2rem;
+        font-weight: 800;
+        margin-bottom: 1rem;
+    }
+
+    .pricing-price {
+        font-size: 3rem;
+        font-weight: 800;
+        margin-bottom: 1rem;
+    }
+
+    .pricing-features {
+        list-style: none;
+        margin-bottom: 2rem;
+    }
+
+    .pricing-features li {
+        padding: 0.5rem 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .pricing-features li:last-child {
+        border-bottom: none;
+    }
+
+    /* Download Section */
+    .download {
+        padding: 4rem 0;
+    }
+
     /* Buttons */
     .btn {
         padding: 12px 24px;
@@ -307,6 +492,10 @@
 
         .content {
             padding: 2rem;
+        }
+
+        .demo-content {
+            grid-template-columns: 1fr;
         }
     }
 </style> 
